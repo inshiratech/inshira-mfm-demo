@@ -29,6 +29,7 @@ def goto(n: int): st.session_state.step = n
 with st.sidebar:
     st.markdown("### Workspace")
     st.caption("A guided, explainable material + energy baseline. No sensors needed.")
+    st.image("assets/logo.png", use_container_width=True)
 
     st.session_state.step = st.radio(
         "Navigate",
