@@ -112,18 +112,23 @@ h1,h2,h3 { letter-spacing: -0.02em; }
   color: white;
   border-color: rgba(15,23,42,.92);
 }
+/* Bigger, higher-contrast logo badge */
 .badge-circle{
-  width: 64px;
-  height: 64px;
+  width: 88px;
+  height: 88px;
   border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(15,23,42,.14);
+  box-shadow: 0 12px 30px rgba(2,6,23,.10);
 }
 .badge-circle img{
-  width: 44px;
-  height: 44px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
   display: block;
 }
