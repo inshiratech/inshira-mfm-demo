@@ -1,4 +1,6 @@
 import streamlit as st
+import base64
+from pathlib import Path
 
 CSS = """
 <style>
@@ -112,6 +114,13 @@ h1,h2,h3 { letter-spacing: -0.02em; }
 }
 </style>
 """
+def img_to_data_uri(path: str) -> str:
+    p = Path(path)
+    data = p.read_bytes()
+    b64 = base64.b64encode(data).decode("utf-8")
+    ext = p.suffix.lower().lstrip(".")
+    mime = "png" if ext == "png" else ext
+    return f"data:image/{mime};base64,{b64}"
 
 def inject_css():
     st.markdown(CSS, unsafe_allow_html=True)
