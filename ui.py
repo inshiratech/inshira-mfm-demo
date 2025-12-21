@@ -112,6 +112,21 @@ h1,h2,h3 { letter-spacing: -0.02em; }
   color: white;
   border-color: rgba(15,23,42,.92);
 }
+.badge-circle{
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.badge-circle img{
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  display: block;
+}
 </style>
 """
 def img_to_data_uri(path: str) -> str:
@@ -148,7 +163,7 @@ def hero(title: str, subtitle: str, right_badge: str = "MVP"):
         <div class="step">Insights</div>
       </div>
     </div>
-    <div class="badge">✅ {right_badge}</div>
+    <div class="badge badge-circle">{right_badge}</div>
   </div>
 </div>
 """, unsafe_allow_html=True)
