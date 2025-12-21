@@ -21,7 +21,12 @@ CSS = """
   --radius: 16px;
 }
 
-.block-container { padding-top: 1.1rem; padding-bottom: 2rem; max-width: 1200px; }
+.block-container { 
+  padding-top: clamp(3.2rem, 4.5vw, 5.0rem);
+  padding-bottom: 2rem;
+  max-width: 1200px;
+}
+
 section[data-testid="stSidebar"] { border-right: 1px solid var(--border); }
 
 h1,h2,h3 { letter-spacing: -0.02em; }
