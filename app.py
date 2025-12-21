@@ -55,11 +55,15 @@ with st.sidebar:
     st.markdown("---")
     demo_mode = st.toggle("Demo mode (synthetic data)", value=True)
 
+from ui import img_to_data_uri
+
+logo_uri = img_to_data_uri("assets/logo.png")
+
 # ---------- top hero ----------
 hero(
     title="Gate-to-Gate Material Flow Map",
     subtitle="Create a virtual copy of shop-floor processes using existing logs (production, materials, energy, waste). AI assists with messy inputs; the model remains physics-first and explainable.",
-    right_badge="""<img src="assets/logo.png" style="width:44px;height:44px;object-fit:contain;" />"""
+    right_badge=f'<img src="{logo_uri}" style="width:44px;height:44px;object-fit:contain;" />'
 )
 stepper(st.session_state.step)
 st.write("")
