@@ -29,7 +29,6 @@ def goto(n: int): st.session_state.step = n
 with st.sidebar:
     st.markdown("### Workspace")
     st.caption("A guided, explainable material + energy baseline. No sensors needed.")
-    st.image("assets/logo.png", use_container_width=True)
 
     st.session_state.step = st.radio(
         "Navigate",
@@ -60,7 +59,7 @@ with st.sidebar:
 hero(
     title="Gate-to-Gate Material Flow Map",
     subtitle="Create a virtual copy of shop-floor processes using existing logs (production, materials, energy, waste). AI assists with messy inputs; the model remains physics-first and explainable.",
-    right_badge="Demo-ready"
+    right_badge="""<img src="assets/logo.png" style="width:44px;height:44px;object-fit:contain;" />"""
 )
 stepper(st.session_state.step)
 st.write("")
